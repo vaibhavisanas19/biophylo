@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIOPHYLO: Phylogenetic Tree & Sequence Analysis Tool</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #466f7e;
+            padding: 15px 20px;
+        }
+
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            height: 70px;
+            margin-right: 10px;
+        }
+
+        .navbar .logo-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #79c2d0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0b1921, #4c2053);
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Card Section */
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: rgb(229, 225, 225);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #417d93;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #426269;
+        }
+
+        /* Footer */
+        footer {
+            background: #355c6b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        /* Page Content */
+        .page-content {
+            padding: 50px 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src='logo .jpg' alt="BioPHYLO Logo" class="logo">
+            <div class="logo-text">BIOPHYLO</div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+            <li><a href="#" onclick="showPage('help')">Help</a></li>
+            <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page">
+        <header class="hero">
+            <h1>BIOPHYLO: Phylogenetic Tree & Sequence Analysis Tool</h1>
+            <p>Explore advanced features for genetic analysis, visualization, and more.</p>
+        </header>
+
+        <div class="container">
+            <div class="card">
+                <h3>Build Phylogenetic Tree</h3>
+                <p>Construct and visualize evolutionary relationships with ease.</p>
+                <a href="https://phylogeny.streamlit.app/" class="btn">Explore</a>
+            </div>
+
+            <div class="card">
+                <h3>Detect Motifs</h3>
+                <p>Identify conserved regions or patterns in nucleotide or protein sequences.</p>
+                <a href="https://motifdetectiuon.streamlit.app/" class="btn">Explore</a>
+            </div>
+
+            <div class="card">
+                <h3>Interaction Network</h3>
+                <p>Visualize and analyze molecular interactions between biological entities.</p>
+                <a href="https://snp-interactionnetworks.streamlit.app/" class="btn">Explore</a>
+            </div>
+
+            <div class="card">
+                <h3>SNP and Percent Identity</h3>
+                <p>Analyze SNPs and compare genetic sequences effectively.</p>
+                <a href="https://snpandpercentidentity-detection.streamlit.app/" class="btn">Explore</a>
+            </div>
+            
+            <div class="card">
+                <h3>Conservation Analysis</h3>
+                <p>Evaluate conservation levels across sequences.</p>
+                <a href="https://conservationanalysis.streamlit.app/" class="btn">Explore</a>
+            </div>
+            
+            <div class="card">
+                <h3>Molecular Docking</h3>
+                <p>Simulate and visualize molecular docking interactions.</p>
+                <a href="https://moleculardocking.streamlit.app/" class="btn">Explore</a>
+            </div>
+
+            <div class="card">
+                <h3>Analyze Mutations</h3>
+                <p>Discover insights into genetic variations and mutations.</p>
+                <a href="https://mutationdetection1.streamlit.app/" class="btn">Explore</a>
+            </div>
+
+            <div class="card">
+                <h3>SNP Pathogenecity</h3>
+                <p>Assess the potential pathogenicity of genetic variations.</p>
+                <a href="https://snppathogenecity.streamlit.app/" class="btn">Explore</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page page-content" style="display: none;">
+        <h2>About BioPHYLO</h2>
+        <p>BioPHYLO is a comprehensive toolkit designed for phylogenetic analysis and molecular docking visualization.
+            BIOPHYLO: Phylogenetic Tree & Sequence Analysis Tool is an advanced toolkit designed for molecular biologists, bioinformaticians, and researchers. It enables the analysis and visualization of phylogenetic trees, sequence alignments, and genetic interactions using Biopython.
+
+<p1>Key Features:
+Phylogenetic Tree Construction: Build and visualize evolutionary relationships effortlessly.
+Motif Detection: Identify conserved sequence patterns in DNA and protein sequences.
+Interaction Network Analysis: Explore molecular interactions among genes and proteins.
+SNP Analysis & Percent Identity: Detect SNPs and assess genetic similarities.
+Mutation Analysis: Study genetic variations and their effects.
+SNP Pathogenicity Assessment: Predict the potential impact of genetic mutations.
+Conservation Analysis: Evaluate evolutionary conservation across sequences.</p1>
+BIOPHYLO is an efficient and open-source tool that integrates machine learning and bioinformatics to enhance research in genomics, molecular docking, and sequence analysis.
+        </p>
+    </div>
+
+    <!-- Help Page -->
+    <div id="help" class="page page-content" style="display: none;">
+        <h2>Help & Support</h2>
+        <p>Find answers to common questions and troubleshooting tips for BioPHYLO.</p>
+        <p1>Welcome to the Help Section of BIOPHYLO!
+            Here, you’ll find answers to common questions, troubleshooting tips, and guidance on using BIOPHYLO effectively.</p1>
+            
+        <p2> Frequently Asked Questions (FAQs)
+            1. How do I build a phylogenetic tree?
+            Upload your sequence data in FASTA or Newick format.
+            Select the appropriate algorithm (e.g., Neighbor-Joining, Maximum Likelihood).
+            Click "Run Analysis" to generate the tree visualization.
+            2. How do I analyze sequence motifs?
+            Go to the Motif Detection tool.
+            Input a nucleotide or protein sequence.
+            Select the desired motif pattern or upload a reference motif.
+            Click "Analyze" to identify conserved regions.
+            3. What file formats are supported?
+            FASTA (.fasta, .fa)
+            Newick (.nwk)
+            CSV (.csv)
+            JSON (.json)
+            4. How do I interpret SNP and percent identity results?
+            SNPs indicate single nucleotide variations in sequences.
+            Percent identity shows how similar two sequences are.
+            Results are color-coded for easy interpretation.
+            5. I encountered an error. What should I do?
+            Ensure the input files are in the correct format.
+            Check if all required fields are filled.
+            Refresh the page and try again.</p2>
+            <p3>If the issue persists, contact support for assistance.
+            Additional Support
+            📌 Documentation: Refer to the official user guide for in-depth tutorials.
+            📌 Community Forum: Join discussions with other researchers and developers.
+            📌 Contact Us: If you need further help, visit the Contact page.</p3>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page page-content" style="display: none;">
+        <h2>Contact Us</h2>
+        <p>Get in touch with the BioPHYLO support team for further assistance.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BioPHYLO. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
